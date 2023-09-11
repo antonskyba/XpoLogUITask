@@ -1,0 +1,8 @@
+<div class="popup__container" [class.display-none]="!(opened$ | async)">
+  <ng-template popupHost></ng-template>
+  <div class="popup__button-container">
+    <button mat-icon-button aria-label="Close" (click)="close()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>

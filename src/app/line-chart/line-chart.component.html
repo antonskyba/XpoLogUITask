@@ -1,0 +1,12 @@
+<div class="padding-md">
+  <app-chart-form
+    (chartParamsChange)="onChartParamsChange($event)"
+  ></app-chart-form>
+</div>
+<div class="padding-md">
+  <app-earthquake-chart
+    chartType="line"
+    [startDate]="params.startDate"
+    [endDate]="params.endDate"
+  ></app-earthquake-chart>
+</div>

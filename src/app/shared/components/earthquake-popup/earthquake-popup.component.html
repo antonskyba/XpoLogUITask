@@ -1,0 +1,12 @@
+<ng-container *ngIf="data && data.properties; let event">
+  <p class="margin-bottom-0">
+    <b>
+      <a [href]="event.url">{{ event.title }}</a>
+    </b>
+  </p>
+  <p class="margin-bottom-0">{{ event.type | titlecase }}</p>
+  <p class="margin-bottom-0">Magnitude: {{ event.mag | number : '1.1-4' }}</p>
+  <p class="margin-bottom-0">
+    <small>{{ event.time | date : 'medium' }}</small>
+  </p>
+</ng-container>

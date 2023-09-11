@@ -1,0 +1,22 @@
+$inner-gap: 10px;
+
+:host {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popup__container {
+  display: flex;
+  max-width: 350px;
+  padding: $inner-gap;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+
+.popup__button-container {
+  flex-shrink: 0;
+  margin: (-$inner-gap) (-$inner-gap) 0 $inner-gap/2;
+}

@@ -1,0 +1,16 @@
+<div class="padding-md">
+  <app-chart-form
+    [magnitude]="true"
+    (chartParamsChange)="onChartParamsChange($event)"
+  ></app-chart-form>
+</div>
+<div class="padding-md">
+  <app-earthquake-chart
+    chartType="column"
+    [events]="5"
+    [startDate]="params.startDate"
+    [endDate]="params.endDate"
+    [maxMagnitude]="params.maxMagnitude!"
+    [popover]="true"
+  ></app-earthquake-chart>
+</div>

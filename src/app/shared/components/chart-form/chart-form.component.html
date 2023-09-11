@@ -1,0 +1,60 @@
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input
+      name="startDate"
+      matInput
+      autocomplete="off"
+      [matDatepicker]="startDatepicker"
+      placeholder="Start Date"
+      [(ngModel)]="params.startDate"
+    />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="startDatepicker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #startDatepicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="margin-left-sm">
+    <input
+      name="endDate"
+      matInput
+      autocomplete="off"
+      [matDatepicker]="endDatepicker"
+      placeholder="End Date"
+      [(ngModel)]="params.endDate"
+    />
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="endDatepicker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #endDatepicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="magnitude" class="margin-left-sm">
+    <input
+      matInput
+      placeholder="Max Magnitude"
+      name="maxMagnitude"
+      autocomplete="off"
+      [(ngModel)]="params.maxMagnitude"
+    />
+  </mat-form-field>
+
+  <button
+    mat-button
+    type="button"
+    class="margin-left-sm"
+    (click)="onResetClick()"
+  >
+    Reset
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    class="margin-left-sm"
+  >
+    Submit
+  </button>
+</form>
